@@ -7,7 +7,7 @@ class Players {
     }
 
     public function search($q) {
-        $sql = "SELECT * FROM Players WHERE name LIKE %q%";
+        $sql = "SELECT * FROM 'TABLE 1' WHERE llName LIKE %q%";
         $stmt = $this->conn->prepare($sql);
         $success = $stmt->execute(array($q));
         if (!$success) {

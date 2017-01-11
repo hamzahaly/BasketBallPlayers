@@ -12,16 +12,18 @@
     $playerModel = new Players($conn);
 
     $matches = $playerModel->search($q);
+
+    date_default_timezone_set("America/Los_Angeles");
 ?>
-
-<html>
-   
-   <head>
-      <title>Hello World</title>
-   </head>
-   
-   <body>
-      <?php echo "Hello, World!";?>
-   </body>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basketball Players</title>
+</head>
+<body>
+    <h1>Basketball Players</h1>
+    <form>
+    <input type="search" name="name" placeholder="enter a name" value="<?= htmlentities($q)?>"></form>
+</body>
 </html>
