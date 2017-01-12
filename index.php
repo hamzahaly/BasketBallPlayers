@@ -2,8 +2,8 @@
     require_once 'connection.php';
     require_once 'models/player-model.php';
 
-    if(isset($_GET['llName'])) {
-        $q = $_GET['llName'];
+    if(isset($_GET['COL 1'])) {
+        $q = $_GET['COL 1'];
     } else {
         $q = '';
     }

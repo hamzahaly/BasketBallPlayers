@@ -7,7 +7,8 @@ class Players {
     }
 
     public function search($q) {
-        $sql = "SELECT * FROM 'TABLE 1' WHERE llName LIKE %$q%";
+        $q = strtolower($q);
+        $sql = "SELECT * FROM 'TABLE 1' WHERE 'COL 1' LIKE %$q%";
         $stmt = $this->conn->prepare($sql);
         $success = $stmt->execute(array($q));
         if (!$success) {
